@@ -1,0 +1,23 @@
+import matplotlib.pyplot as plt
+ 
+year = int(input("Desde que ano quieres calcular? : "))
+
+time = int(input("Cuanto anos quieres calcular? : "))
+
+tiempo = []
+
+ventas = []
+
+for i in range(time):
+    tiempo.append(year)
+    year += 1
+    
+
+for i in range(time):
+    a = int(input("Cuantas ventas tuviste en " + str(tiempo[i]) + "? : "))
+    
+    ventas.append(a)
+    
+    year += 1
+    
+plt.plot(tiempo, ventas, marker = "o", linestyle = "--", color = "r", label = "Ventas")
